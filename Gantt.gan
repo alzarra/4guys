@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?><project name="4 Guys" company="" webLink="http://" view-date="2017-08-29" view-index="0" gantt-divider-location="381" resource-divider-location="300" version="2.8.5" locale="en_US">
+<?xml version="1.0" encoding="UTF-8"?><project name="4 Guys" company="" webLink="http://" view-date="2017-08-29" view-index="0" gantt-divider-location="658" resource-divider-location="300" version="2.8.5" locale="en_US">
     <description/>
     <view zooming-state="default:2" id="gantt-chart">
-        <field id="tpd3" name="Name" width="95" order="0"/>
-        <field id="tpd4" name="Begin date" width="38" order="1"/>
-        <field id="tpd5" name="End date" width="90" order="2"/>
-        <field id="tpc0" name="Group Member" width="76" order="3"/>
-        <field id="tpc1" name="Notes" width="76" order="4"/>
+        <field id="tpd3" name="Name" width="232" order="0"/>
+        <field id="tpd4" name="Begin date" width="86" order="1"/>
+        <field id="tpd5" name="End date" width="71" order="2"/>
+        <field id="tpc0" name="Group Member" width="132" order="3"/>
+        <field id="tpc1" name="Notes" width="131" order="4"/>
     </view>
     <view id="resource-table">
         <field id="0" name="Name" width="209" order="0"/>
@@ -39,14 +39,18 @@
         </taskproperties>
         <task id="0" name="Learn Software Engineering Tools" color="#000000" meeting="false" project="true" start="2017-08-31" duration="19" complete="0" expand="true">
             <customproperty taskproperty-id="tpc0" value="Group"/>
+            <customproperty taskproperty-id="tpc1" value="Seth-20 hours"/>
             <task id="4" name="Gantt Chart" meeting="false" start="2017-09-21" duration="4" complete="0" expand="true">
                 <customproperty taskproperty-id="tpc0" value="Group"/>
+                <customproperty taskproperty-id="tpc1" value="Seth-1 hour"/>
             </task>
             <task id="1" name="GIT" meeting="false" start="2017-08-31" duration="16" complete="0" expand="true">
                 <customproperty taskproperty-id="tpc0" value="Group"/>
+                <customproperty taskproperty-id="tpc1" value="Seth-12 hours"/>
             </task>
             <task id="3" name="ATOM" meeting="false" start="2017-08-31" duration="16" complete="0" expand="true">
                 <customproperty taskproperty-id="tpc0" value="Group"/>
+                <customproperty taskproperty-id="tpc1" value="Seth-7 hours"/>
             </task>
         </task>
     </tasks>
