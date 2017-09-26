@@ -2,13 +2,13 @@
     <description/>
     <view zooming-state="default:9" id="gantt-chart">
         <field id="tpd3" name="Name" width="265" order="0"/>
-        <field id="tpd4" name="Begin date" width="119" order="1"/>
-        <field id="tpd5" name="End date" width="104" order="2"/>
+        <field id="tpd4" name="Begin date" width="120" order="1"/>
+        <field id="tpd5" name="End date" width="105" order="2"/>
         <field id="tpc0" name="Group Member" width="164" order="3"/>
     </view>
     <view id="resource-table">
-        <field id="0" name="Name" width="209" order="0"/>
-        <field id="1" name="Default role" width="85" order="1"/>
+        <field id="0" name="Name" width="210" order="0"/>
+        <field id="1" name="Default role" width="86" order="1"/>
     </view>
     <!-- -->
     <calendars>
@@ -40,15 +40,18 @@
 ]]></notes>
             <customproperty taskproperty-id="tpc0" value="Group"/>
             <task id="4" name="Gantt Chart" color="#8cb6ce" meeting="false" start="2017-09-21" duration="4" complete="0" expand="true">
-                <notes><![CDATA[Seth- 1 hour]]></notes>
+                <notes><![CDATA[Seth- 1 hour
+Ali- 1 hour]]></notes>
                 <customproperty taskproperty-id="tpc0" value="Group"/>
             </task>
             <task id="1" name="GIT" color="#8cb6ce" meeting="false" start="2017-08-31" duration="16" complete="0" expand="true">
-                <notes><![CDATA[Seth - 12 hours]]></notes>
+                <notes><![CDATA[Seth - 12 hours
+Ali- 30 min]]></notes>
                 <customproperty taskproperty-id="tpc0" value="Group"/>
             </task>
             <task id="3" name="ATOM" color="#8cb6ce" meeting="false" start="2017-08-31" duration="16" complete="0" expand="true">
-                <notes><![CDATA[Seth - 7 hours]]></notes>
+                <notes><![CDATA[Seth - 7 hours
+Ali - 2 days]]></notes>
                 <customproperty taskproperty-id="tpc0" value="Group"/>
             </task>
         </task>
