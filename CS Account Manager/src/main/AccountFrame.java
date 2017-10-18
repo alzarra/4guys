@@ -11,6 +11,14 @@ public class AccountFrame {
   aFrame.getContentPane().add(Lpanel);
   aFrame.pack();
   aFrame.setVisible(true);
+  aFrame.getContentPane().add(accountView);
+  accountView.setVisible(false);
+  // the method below checks for a username/password match; if they match, the
+  // initial view will replace the login panel
+  if (Lpanel.match == true) {
+   Lpanel.setVisible(false);
+   // accountView.setVisible(true);
+  }
 
  }
 }

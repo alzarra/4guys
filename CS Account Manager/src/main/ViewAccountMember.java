@@ -30,12 +30,13 @@ public class ViewAccountMember extends JPanel {
   public void actionPerformed(ActionEvent arg0) {
    // We will need to create a method that, when the logout button is pressed,
    // transfers focus to the Login panel
-   System.out.println("Button pressed");
+
   }
 
  }
 
- public static void main(String[] args) {// the main method below is for unit testing
+ // the main method below is for unit testing
+ public static void main(String[] args) {
   JFrame testFrame = new JFrame();
   ViewAccountMember x = new ViewAccountMember();
   testFrame.getContentPane().add(x);

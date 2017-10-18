@@ -2,6 +2,8 @@ import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -13,16 +15,19 @@ public class LoginPanel extends JPanel {
  private JLabel unameLabel, pwdLabel;
  private JTextField unameTField, pwdTField;
  private JButton login;
- private String username, password;
+ private String usernameInput, passwordInput, usernameActual, passwordActual;
+ public boolean match;
 
  public LoginPanel() {
 
   unameLabel = new JLabel("Username: ");
   pwdLabel = new JLabel("Password: ");
   login = new JButton("Login");
-  unameTField = new JTextField("                 ");
-  pwdTField = new JTextField("                  ");
-
+  unameTField = new JTextField("");
+  pwdTField = new JTextField("");
+  // username and password for testing purposes
+  usernameActual = "user";
+  passwordActual = "pass";
   setPreferredSize(new Dimension(300, 300));
   setBackground(Color.WHITE);
 
@@ -45,9 +50,23 @@ public class LoginPanel extends JPanel {
   lButtonPanel.add(login);
   panelLayout.add(lButtonPanel);
 
-  username = unameTField.getText();
-  password = pwdTField.getText();
+  login.addActionListener(new textListen());
 
  }
 
+ private class textListen implements ActionListener {
+
+  @Override
+  public void actionPerformed(ActionEvent arg0) {
+   usernameInput = unameTField.getText();
+   passwordInput = pwdTField.getText();
+   if (usernameInput.equals(usernameActual) && passwordInput.equals(passwordActual)) {
+    System.out.println("Match");
+    match = true;
+   } else
+    System.out.println("Invalid");
+   match = false;
+  }
+
+ }
 }
