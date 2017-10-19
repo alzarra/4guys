@@ -1,4 +1,3 @@
-
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.*;
@@ -12,20 +11,20 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import javax.swing.JOptionPane;
+
+import java.util.ArrayList;
 
 
 public class CreateMemberPanel extends JPanel {
 
-
-
  private JLabel firstNameLabel, lastNameLabel;
  private JTextField firstNameTField, lastNameTField;
  private JButton submit, home;
- public String firstName, lastName;
+ private String firstName, lastName;
 
+ ArrayList<AccountMember> myList = new ArrayList<AccountMember>();
  public CreateMemberPanel() {
-
-  System.out.println("Here");
 
   firstNameLabel = new JLabel("First Name:");
   lastNameLabel = new JLabel("Last Name:");
@@ -66,39 +65,29 @@ public class CreateMemberPanel extends JPanel {
   hButtonPanel.add(home);
   panelLayout.add(hButtonPanel);
 
-  firstName = firstNameTField.getText();
-  lastName = lastNameTField.getText();
-
  }
 
  private class ButtonListener implements ActionListener
  {
-
    public void actionPerformed(ActionEvent event)
    {
-    if (event.getSource() == home)
-    System.out.println("home");
-    else
-    validateInput();
-    System.out.println("submit");
+     String firstName, lastName;
 
+     firstName = firstNameTField.getText();
+     lastName = lastNameTField.getText();
+
+     if (event.getSource() == home)
+     System.out.println("home");
+     else if (event.getSource() == submit)
+     {
+          if (firstName.equals("") || lastName.equals(""))
+              {
+                JOptionPane.showMessageDialog(null,"Please enter your First and last name.");
+              }
+     System.out.println("submit");
+     AccountMember myMember = new AccountMember(firstName);
+     myList.add(myMember);
    }
- }
-
- private void validateInput()
- {
-   String text1 = firstName;
-   String text2 = lastName;
-
-   System.out.println("invalid");
-
-   if ((text1.length() == 0) || (text2.length() == 0))
-   {
-     System.out.println("invalid");
-   }
-   else
-   {
-     System.out.println("valid");
    }
  }
 
