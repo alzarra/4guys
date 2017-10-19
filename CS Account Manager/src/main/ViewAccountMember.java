@@ -12,6 +12,7 @@ public class ViewAccountMember extends JPanel {
  private AccountMember member;
  private JLabel displayName;
  private JButton logOut;
+ public JFrame mainFrame;
 
  public ViewAccountMember() {
   member = new AccountMember("Auston Rogers");// initializes a new member
@@ -30,7 +31,6 @@ public class ViewAccountMember extends JPanel {
   public void actionPerformed(ActionEvent arg0) {
    // We will need to create a method that, when the logout button is pressed,
    // transfers focus to the Login panel
-
   }
 
  }
