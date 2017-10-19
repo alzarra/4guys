@@ -61,6 +61,26 @@ Auston - 6 hours]]></notes>
                 <customproperty taskproperty-id="tpc0" value="Group"/>
             </task>
         </task>
+        <task id="5" name="Group meeting" color="#8cb6ce" meeting="false" start="2017-10-10" duration="1" complete="0" expand="true">
+            <notes><![CDATA[Group meeting to descuss our first sprint ]]></notes>
+        </task>
+        <task id="8" name="Sprint1" color="#8cb6ce" meeting="false" start="2017-10-17" duration="3" complete="0" expand="true">
+            <notes><![CDATA[Job assigned;
+Ali: 
+1-company signturer 
+2-Home Panel
+3-Testing
+4-Connection between Panels and Frames
+Josh:
+1-login Panel
+2-user name, password, login button
+Austen:
+1-Account Panel 
+2- add and delete 
+Seth:
+1-Transaction Panel
+2- deteils ]]></notes>
+        </task>
     </tasks>
     <resources/>
     <allocations/>
