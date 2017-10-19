@@ -3,12 +3,12 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JFrame;
 
-public class AccountFrame {
+public class AccountFrame extends JFrame {
  public JFrame aFrame;
  public LoginPanel Lpanel;
  public ViewAccountMember accountView;
 
- public AccountFrame() {
+ public AccountFrame(String name) {
   aFrame = new JFrame("CS-AccountManager");
   aFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
   Lpanel = new LoginPanel();
@@ -39,6 +39,6 @@ public class AccountFrame {
  }
 
  public static void main(String[] args) {
-  AccountFrame acct = new AccountFrame();
+  AccountFrame acct = new AccountFrame("Test");
  }
 }
