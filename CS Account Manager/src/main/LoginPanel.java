@@ -5,10 +5,13 @@ import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import javax.swing.border.BevelBorder;
 
 public class LoginPanel extends JPanel {
 
@@ -33,6 +36,7 @@ public class LoginPanel extends JPanel {
 
   this.setLayout(new BorderLayout());
   GridLayout grid = new GridLayout(4, 1);
+ 
   JPanel panelLayout = new JPanel(grid);
   JPanel uNamePanel = new JPanel();
   JPanel pwdPanel = new JPanel();
@@ -51,6 +55,15 @@ public class LoginPanel extends JPanel {
   panelLayout.add(lButtonPanel);
 
   login.addActionListener(new textListen());
+  
+//by Ali "Logo" "will added to each frame"
+  JPanel LogoPanel = new JPanel();
+  LogoPanel.setBorder(new BevelBorder(BevelBorder.LOWERED));
+  this.add(LogoPanel, BorderLayout.SOUTH);
+  LogoPanel.setPreferredSize(new Dimension(this.getWidth(), 16));
+  LogoPanel.setLayout(new BoxLayout(LogoPanel, BoxLayout.X_AXIS));
+  JLabel LogoLabel = new JLabel("Developed by 4Guys");
+  LogoPanel.add(LogoLabel);
 
  }
 
@@ -58,6 +71,16 @@ public class LoginPanel extends JPanel {
 
   @Override
   public void actionPerformed(ActionEvent arg0) {
+	  
+	  if(unameTField.getText().equals(usernameActual) && pwdTField.getText().equals(passwordActual)) {
+		  JOptionPane.showMessageDialog(null, "you are succefully loged in");
+		  HomePanel home = new HomePanel();
+		  home.setVisible(true);
+		  
+	  }
+	  else {
+		  JOptionPane.showMessageDialog(null, "Oops!! something is wrong, try again");
+	  }
   }
 
  }
